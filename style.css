@@ -1,0 +1,217 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #a9bd95;
+    margin: 0;
+    padding: 20px;
+}
+
+.app-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #869f6d;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #20331b;
+    font-weight: 800;
+    font-size: 40px;
+}
+
+button {
+    background-color: #626b4a;
+    border: none;
+    margin-bottom: 20px;
+    color: rgb(236, 227, 227);
+    padding: 12px 25px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #6e7753;
+}
+
+#loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #20331b;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: 20px auto;
+    animation: spin 1s linear infinite;
+}
+
+[hidden] {
+    display: none;
+}
+
+.meal-container {
+    display: grid;
+    background-color: #ddd;
+    gap: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    border-radius: 12px;
+}
+
+#meal-container[hidden] {
+    display: none !important;
+}
+
+.box {
+    background-color: #4caf50;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.box:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+#meal-name {
+    background-color: #20331b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+#meal-image {
+    background-color: #959581;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#meal-category {
+    background-color: #4c583e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+#meal-ingredient {
+    background-color: #859864;
+}
+
+#meal-ingredient ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+    margin: 10px 0;
+}
+
+#meal-ingredient li {
+    list-style: none;
+    margin-bottom: 6px;
+    font-size: 18px;
+}
+
+#youtube {
+    background-color: #2c3424;
+}
+
+#meal-instructions {
+    background-color: #4b543c;
+    text-align: left;
+}
+
+#meal-container img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+#meal-container ul {
+    text-align: left;
+    padding-left: 20px;
+}
+
+/* .youtube-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 15px;
+    background-color: #ff6b6b;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+} */
+
+#youtube {
+    background-color: #2c3424;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+#youtube iframe {
+    width: 100%;
+    height: 300px; /* You can adjust this height as needed */
+    border: none;
+}
+
+#meal-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+#error-message {
+    color: red;
+    margin-top: 20px;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+    .app-container {
+        padding: 20px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    #youtube iframe {
+        height: 200px;  
+    }
+}
